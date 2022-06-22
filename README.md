@@ -1,6 +1,13 @@
 # integer-compression
 JS bindings to C++ compression methods
 
+## Clone
+
+```sh
+git clone git@github.com:torwig/integer-compression.git
+git submodule update --init compression
+```
+
 ## Build
 
 ```sh
