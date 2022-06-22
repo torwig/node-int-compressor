@@ -1,4 +1,4 @@
-var addon = require('bindings')('int-compressor.node')
+var addon = require('bindings')('intcompressor.node')
 
 const n = 16*1024*1024
 const srcLen = 4 * n
