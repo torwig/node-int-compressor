@@ -1,15 +1,15 @@
 {
-  "name": "integer_compression",
+  "name": "node-int-compressor",
   "version": "0.1.0",
-  "description": "Node.js Addon for Integer Compression",
-  "main": "addon.js",
+  "description": "Node.js Addon for TurboPFor - Fastest Integer Compression",
+  "main": "index.js",
   "private": true,
   "dependencies": {
     "bindings": "~1.2.1",
     "node-addon-api": "^1.0.0"
   },
   "scripts": {
-    "test": "node addon.js"
+    "test": "node index.js"
   },
   "gypfile": true
 }
