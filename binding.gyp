@@ -1,11 +1,11 @@
 {
   "targets": [
     {
-      "target_name": "addon",
+      "target_name": "intcompressor",
       "cflags!": [ "-fno-exceptions", "-fstrict-aliasing" ],
       "cflags_cc!": [ "-fno-exceptions", "-fstrict-aliasing" ],
       "sources": [ 
-          "addon.cc"
+          "intcompressor.cc"
       ],
       "libraries": [
           "<(module_root_dir)/compression/libic.a"
