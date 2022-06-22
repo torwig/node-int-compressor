@@ -1,3 +1,0 @@
-[submodule "compression"]
-	path = compression
-	url = git@github.com:torwig/TurboPFor-Integer-Compression.git
