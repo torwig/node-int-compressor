@@ -23,5 +23,5 @@ node-gyp rebuild
 
 ## Run
 ```sh
-node addon.js
+node index.js
 ```
