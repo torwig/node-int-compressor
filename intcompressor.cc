@@ -7,6 +7,9 @@
 #include "compression/vsimple.h"
 
 
+// Variable byte functions
+
+// Encode unsorted array with n integer values
 Napi::Value VbEncode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -34,6 +37,7 @@ Napi::Value VbEncode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, encoded);
 }
 
+// Decode unsorted array with n integer values
 Napi::Value VbDecode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -72,6 +76,7 @@ Napi::Value VbDecode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// Encode unsorted array with n integer values
 Napi::Value VbEncode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -99,6 +104,7 @@ Napi::Value VbEncode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, encoded);
 }
 
+// Decode unsorted array with n integer values
 Napi::Value VbDecode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -137,6 +143,7 @@ Napi::Value VbDecode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// Encode increasing integer array
 Napi::Value VbDEncode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -164,6 +171,7 @@ Napi::Value VbDEncode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// Decode increasing integer array
 Napi::Value VbDDecode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -202,6 +210,7 @@ Napi::Value VbDDecode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// Encode increasing integer array
 Napi::Value VbDEncode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -229,6 +238,7 @@ Napi::Value VbDEncode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// Decode increasing integer array
 Napi::Value VbDDecode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -267,6 +277,7 @@ Napi::Value VbDDecode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// Encode array of strictly increasing (never remaining constant or decreasing) integer values
 Napi::Value VbD1Encode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -294,6 +305,7 @@ Napi::Value VbD1Encode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// Decode array of strictly increasing (never remaining constant or decreasing) integer values
 Napi::Value VbD1Decode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -332,6 +344,7 @@ Napi::Value VbD1Decode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// Encode array of strictly increasing (never remaining constant or decreasing) integer values
 Napi::Value VbD1Encode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -359,6 +372,7 @@ Napi::Value VbD1Encode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// Decode array of strictly increasing (never remaining constant or decreasing) integer values
 Napi::Value VbD1Decode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -397,6 +411,7 @@ Napi::Value VbD1Decode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// ZigZag encoding of unsorted integer array
 Napi::Value VbZEncode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -424,6 +439,7 @@ Napi::Value VbZEncode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// ZigZag decoding of unsorted integer array
 Napi::Value VbZDecode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -462,6 +478,7 @@ Napi::Value VbZDecode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// ZigZag encoding of unsorted integer array
 Napi::Value VbZEncode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -489,6 +506,7 @@ Napi::Value VbZEncode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// ZigZag decoding of unsorted integer array
 Napi::Value VbZDecode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -527,6 +545,7 @@ Napi::Value VbZDecode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// ZigZag encoding of unsorted integer array
 Napi::Value VbZEncode8(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -554,6 +573,7 @@ Napi::Value VbZEncode8(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// ZigZag decoding of unsorted integer array
 Napi::Value VbZDecode8(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -592,6 +612,7 @@ Napi::Value VbZDecode8(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// XOR encoding of unsorted integer array
 Napi::Value VbXEncode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -619,6 +640,7 @@ Napi::Value VbXEncode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// XOR decoding of unsorted integer array
 Napi::Value VbXDecode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -657,6 +679,7 @@ Napi::Value VbXDecode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// XOR encoding of unsorted integer array
 Napi::Value VbXEncode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -684,6 +707,7 @@ Napi::Value VbXEncode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// XOR decoding of unsorted integer array
 Napi::Value VbXDecode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -722,6 +746,7 @@ Napi::Value VbXDecode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// XOR encoding of unsorted integer array
 Napi::Value VbXEncode8(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -749,6 +774,7 @@ Napi::Value VbXEncode8(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// XOR decoding of unsorted integer array
 Napi::Value VbXDecode8(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -787,6 +813,7 @@ Napi::Value VbXDecode8(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// Delta of delta encoding of array of unsorted integer values
 Napi::Value VbDdEncode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -814,6 +841,7 @@ Napi::Value VbDdEncode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// Delta of delta decoding of array of unsorted integer values
 Napi::Value VbDdDecode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -852,6 +880,7 @@ Napi::Value VbDdDecode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// Delta of delta encoding of array of unsorted integer values
 Napi::Value VbDdEncode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -879,6 +908,7 @@ Napi::Value VbDdEncode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// Delta of delta decoding of array of unsorted integer values
 Napi::Value VbDdDecode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -917,6 +947,7 @@ Napi::Value VbDdDecode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding of array of unsorted integer values
 Napi::Value V8Encode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -944,6 +975,7 @@ Napi::Value V8Encode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding of array of unsorted integer values
 Napi::Value V8Decode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -982,6 +1014,7 @@ Napi::Value V8Decode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding of array of unsorted integer values
 Napi::Value V8Encode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1009,6 +1042,7 @@ Napi::Value V8Encode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding of array of unsorted integer values
 Napi::Value V8Decode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1047,6 +1081,7 @@ Napi::Value V8Decode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding of array of sorted integer values
 Napi::Value V8DEncode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1074,6 +1109,7 @@ Napi::Value V8DEncode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding of array of sorted integer values
 Napi::Value V8DDecode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1112,6 +1148,7 @@ Napi::Value V8DDecode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding of array of sorted integer values
 Napi::Value V8DEncode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1139,6 +1176,7 @@ Napi::Value V8DEncode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte encoding of array of sorted integer values
 Napi::Value V8DDecode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1177,6 +1215,7 @@ Napi::Value V8DDecode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding of array of strictly increasing integer values
 Napi::Value V8D1Encode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1204,6 +1243,7 @@ Napi::Value V8D1Encode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding of array of strictly increasing integer values
 Napi::Value V8D1Decode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1242,6 +1282,7 @@ Napi::Value V8D1Decode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding of array of strictly increasing integer values
 Napi::Value V8D1Encode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1269,6 +1310,7 @@ Napi::Value V8D1Encode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding of array of strictly increasing integer values
 Napi::Value V8D1Decode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1307,6 +1349,7 @@ Napi::Value V8D1Decode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with ZigZag of array of unsorted integer values
 Napi::Value V8ZEncode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1334,6 +1377,7 @@ Napi::Value V8ZEncode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with ZigZag of array of unsorted integer values
 Napi::Value V8ZDecode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1372,6 +1416,7 @@ Napi::Value V8ZDecode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with ZigZag of array of unsorted integer values
 Napi::Value V8ZEncode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1399,6 +1444,7 @@ Napi::Value V8ZEncode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte encoding with ZigZag of array of unsorted integer values
 Napi::Value V8ZDecode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1437,6 +1483,7 @@ Napi::Value V8ZDecode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with XOR of array of unsorted integer values
 Napi::Value V8XEncode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1464,6 +1511,7 @@ Napi::Value V8XEncode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with XOR of array of unsorted integer values
 Napi::Value V8XDecode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1502,6 +1550,7 @@ Napi::Value V8XDecode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with XOR of array of unsorted integer values
 Napi::Value V8XEncode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1529,6 +1578,7 @@ Napi::Value V8XEncode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with XOR of array of unsorted integer values
 Napi::Value V8XDecode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1567,6 +1617,7 @@ Napi::Value V8XDecode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of unsorted integer values
 Napi::Value V8NEncode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1593,6 +1644,7 @@ Napi::Value V8NEncode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of unsorted integer values
 Napi::Value V8NDecode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1630,6 +1682,7 @@ Napi::Value V8NDecode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of unsorted integer values
 Napi::Value V8NEncode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1656,6 +1709,7 @@ Napi::Value V8NEncode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of unsorted integer values
 Napi::Value V8NDecode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1693,6 +1747,7 @@ Napi::Value V8NDecode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of sorted integer values
 Napi::Value V8NDEncode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1719,6 +1774,7 @@ Napi::Value V8NDEncode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of sorted integer values
 Napi::Value V8NDDecode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1756,6 +1812,7 @@ Napi::Value V8NDDecode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of sorted integer values
 Napi::Value V8NDEncode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1782,6 +1839,7 @@ Napi::Value V8NDEncode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of sorted integer values
 Napi::Value V8NDDecode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1819,6 +1877,7 @@ Napi::Value V8NDDecode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of strictly increasing integer values
 Napi::Value V8ND1Encode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1845,6 +1904,7 @@ Napi::Value V8ND1Encode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of strictly increasing integer values
 Napi::Value V8ND1Decode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1882,6 +1942,7 @@ Napi::Value V8ND1Decode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of strictly increasing integer values
 Napi::Value V8ND1Encode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1908,6 +1969,7 @@ Napi::Value V8ND1Encode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of strictly increasing integer values
 Napi::Value V8ND1Decode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1945,6 +2007,7 @@ Napi::Value V8ND1Decode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking and ZigZag of array of unsorted integer values
 Napi::Value V8NZEncode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -1971,6 +2034,7 @@ Napi::Value V8NZEncode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking and ZigZag of array of unsorted integer values
 Napi::Value V8NZDecode32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2008,6 +2072,7 @@ Napi::Value V8NZDecode32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking and ZigZag of array of unsorted integer values
 Napi::Value V8NZEncode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2034,6 +2099,7 @@ Napi::Value V8NZEncode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking and ZigZag of array of unsorted integer values
 Napi::Value V8NZDecode16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2071,6 +2137,7 @@ Napi::Value V8NZDecode16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of unsorted integer values
 Napi::Value V8NEncode128v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2097,6 +2164,7 @@ Napi::Value V8NEncode128v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of unsorted integer values
 Napi::Value V8NDecode128v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2134,6 +2202,7 @@ Napi::Value V8NDecode128v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of unsorted integer values
 Napi::Value V8NEncode128v16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2160,6 +2229,7 @@ Napi::Value V8NEncode128v16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of unsorted integer values
 Napi::Value V8NDecode128v16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2197,6 +2267,7 @@ Napi::Value V8NDecode128v16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of sorted integer values
 Napi::Value V8NDEncode128v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2223,6 +2294,7 @@ Napi::Value V8NDEncode128v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of sorted integer values
 Napi::Value V8NDDecode128v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2260,6 +2332,7 @@ Napi::Value V8NDDecode128v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of sorted integer values
 Napi::Value V8NDEncode128v16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2286,6 +2359,7 @@ Napi::Value V8NDEncode128v16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of sorted integer values
 Napi::Value V8NDDecode128v16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2323,6 +2397,7 @@ Napi::Value V8NDDecode128v16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of sorted integer values
 Napi::Value V8ND1Encode128v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2349,6 +2424,7 @@ Napi::Value V8ND1Encode128v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of sorted integer values
 Napi::Value V8ND1Decode128v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2386,6 +2462,7 @@ Napi::Value V8ND1Decode128v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of strictly increasing integer values
 Napi::Value V8ND1Encode128v16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2412,6 +2489,7 @@ Napi::Value V8ND1Encode128v16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of strictly increasing integer values
 Napi::Value V8ND1Decode128v16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2449,6 +2527,7 @@ Napi::Value V8ND1Decode128v16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking and ZigZag of array of strictly increasing integer values
 Napi::Value V8NZEncode128v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2475,6 +2554,7 @@ Napi::Value V8NZEncode128v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking and ZigZag of array of strictly increasing integer values
 Napi::Value V8NZDecode128v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2512,6 +2592,7 @@ Napi::Value V8NZDecode128v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking and ZigZag of array of strictly increasing integer values
 Napi::Value V8NZEncode128v16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2538,6 +2619,7 @@ Napi::Value V8NZEncode128v16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking and ZigZag of array of strictly increasing integer values
 Napi::Value V8NZDecode128v16(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -5809,7 +5891,7 @@ Napi::Value EFano1Decode128v32(const Napi::CallbackInfo& info) {
 /////
 
 Napi::Object Init(Napi::Env env, Napi::Object exports) {
-  // variable byte
+  // variable byte group
   exports.Set(Napi::String::New(env, "VbEncode32"), Napi::Function::New(env, VbEncode32));
   exports.Set(Napi::String::New(env, "VbDecode32"), Napi::Function::New(env, VbDecode32));
   exports.Set(Napi::String::New(env, "VbEncode16"), Napi::Function::New(env, VbEncode16));
