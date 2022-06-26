@@ -7,6 +7,22 @@
 #include "compression/vsimple.h"
 
 
+/**
+
+Encoding functions usually accepts two arguments:
+1. Incoming array of 8/6/32 bit integer values (Uint8Array, Uint16Array, Uint32Array)
+2. Uint8Array as the destination for encoded data
+Return value: number of values that was encoded.
+
+Decoding functions usually accepts three arguments:
+1. Uint8Array as encoded data
+2. Number as a size of bytes in the incoming array
+3. Uint8Array/Uint16Array/Uint32Array as the destination for decoded integer values
+Return value: number of bytes from the incoming array that were processed.
+Note: destination array should be allocated before call to decoding function.
+
+*/
+
 // Variable byte functions
 
 // Encode unsorted array with n integer values
@@ -2657,6 +2673,7 @@ Napi::Value V8NZDecode128v16(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of unsorted integer values
 Napi::Value V8NEncode256v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2683,6 +2700,7 @@ Napi::Value V8NEncode256v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of unsorted integer values
 Napi::Value V8NDecode256v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2720,6 +2738,7 @@ Napi::Value V8NDecode256v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of sorted integer values
 Napi::Value V8NDEncode256v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2746,6 +2765,7 @@ Napi::Value V8NDEncode256v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of sorted integer values
 Napi::Value V8NDDecode256v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2783,6 +2803,7 @@ Napi::Value V8NDDecode256v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking of array of streactly increasing integer values
 Napi::Value V8ND1Encode256v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2809,6 +2830,7 @@ Napi::Value V8ND1Encode256v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking of array of streactly increasing integer values
 Napi::Value V8ND1Decode256v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2846,6 +2868,7 @@ Napi::Value V8ND1Decode256v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, decoded);
 }
 
+// TurboByte encoding with bitpacking and ZigZag of array of unsorted integer values
 Napi::Value V8NZEncode256v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
@@ -2872,6 +2895,7 @@ Napi::Value V8NZEncode256v32(const Napi::CallbackInfo& info) {
   return Napi::Number::New(env, len);
 }
 
+// TurboByte decoding with bitpacking and ZigZag of array of unsorted integer values
 Napi::Value V8NZDecode256v32(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
